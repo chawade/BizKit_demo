@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,54 +11,151 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+@import 'primeicons/primeicons.css';
+/**********Import Font from Google Font*********/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;0,800;0,900;1,300;1,400;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Rubik:ital,wght@0,300;0,400;0,700;0,800;0,900;1,300;1,400;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+/***********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+:root {
+  --color-primary: #37C2A5;
+  --color-danger: #FC9D17;
+
+  --color-white: #ffffff;
+  --color-light: #e9ecef;
+
+  --color-black: #292629;
+  --color-dark: #000000;
+
+  --transition: .4 ease;
 }
-a:hover {
-  color: #535bf2;
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans Thai', sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: var(--color-light);
+  color: var(--color-dark);
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+h4 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 48px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+small {
+  color: var(--color-light);
+  font-size: 14px;
+}
+
+span {
+  color: var(--color-danger);
+}
+
+label {
+  display: block;
+  margin: auto;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  display: inline-block;
+  width: fit-content;
   cursor: pointer;
-  transition: border-color 0.25s;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid var(--color-white);
+  padding: 8px 10px;
+  color: var(--color-primary);
+  border-radius: 5px;
+  transition: var(--transition);
 }
 button:hover {
-  border-color: #646cff;
+  background: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-white);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto --color-light;
+}
+.btn-primary {
+  color: var(--color-dark);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
+.btn-danger {
+  background: var(--color-danger);
+  color: var(--color-dark);
+  border-color: var(--color-danger);
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1480px;
+}
+
+section {
+  padding: 4rem 0;
+}
 .card {
   padding: 2em;
 }
 
-#app {
+/* #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -76,4 +173,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
